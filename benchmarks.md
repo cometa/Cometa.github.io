@@ -2,17 +2,17 @@
 layout: post
 title: Cometa Benchmarks
 ---
-#Cometa 
-##Performance Benchmarks
+# Cometa 
+## Performance Benchmarks
 
-####Author 
+#### Author 
 Marco Graziano 
 Visible Energy, Inc.
 
-####Date: 
+#### Date
 August, 2015
 
-####Abstract
+#### Abstract
 This document describes the methodology and the results of performance and scalability benchmarks of the Cometa server version 2.1.
 
 ----------
@@ -214,7 +214,7 @@ Number of opened WebSockets:  2,000
 
 
 ----------
-##Case 2: 500,000 connected devices
+## Case 2: 500,000 connected devices
 
 #### Case 2.1:  response size 32 bytes
 Number of devices: 500,000
@@ -282,7 +282,7 @@ Number of opened WebSockets:  4,000
 
 
 ----------
-##Case 3: 1,000,000 connected devices
+## Case 3: 1,000,000 connected devices
 
 #### Case 3.1:  response size 32 bytes
 Number of devices: 1,000,000
