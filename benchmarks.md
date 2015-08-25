@@ -1,5 +1,3 @@
----
----
 # Cometa 
 ###Performance Benchmarks
 
