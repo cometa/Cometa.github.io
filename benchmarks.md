@@ -1,16 +1,19 @@
----
----
-# Cometa 
-###Performance Benchmarks
 
-#### Author 
+---
+layout: post
+title: Cometa Benchmarks
+---
+#Cometa 
+##Performance Benchmarks
+
+####Author 
 Marco Graziano 
 Visible Energy, Inc.
 
 ####Date: 
 August, 2015
 
-#### Abstract
+####Abstract
 This document describes the methodology and the results of performance and scalability benchmarks of the Cometa server version 2.1.
 
 ----------
@@ -108,27 +111,26 @@ Using this definition is possible to estimate the added latency for a message/re
 The Cometa server collects traffic statistics continuously and it is obtained by a HTTP GET to the `/application/{app_d}` resource as specified in the [Cometa API](http://www.cometa.io/cometa-api.html#application).
 
 Example:
-```
-$ curl -H 'Authorization: OAuth 8ad3773142a6692b25b7' http://api.cometa.io/application/946604ed1d971eca2879
 
-{
-  "app_id":"946604ed1d971eca2879",
-  "app_name":"cometatest",
-  "stats": {
-    "num_devices":"10000",
-    "messages":"8896837",
-    "errors":"0",
-    "bytes_up":"302578104",
-    "bytes_down":"286847744",
-    "latency":"8",
-    "latency_min":"0",
-    "latency_max":"12",
-    "std_deviation":"1.000",
-    "websockets":"500"
-  }
-}
+	$ curl -H 'Authorization: OAuth 8ad3773142a6692b25b7' http://api.cometa.io/application/946604ed1d971eca2879
 
-```
+	{
+	  "app_id":"946604ed1d971eca2879",
+	  "app_name":"cometatest",
+	  "stats": {
+	    "num_devices":"10000",
+	    "messages":"8896837",
+	    "errors":"0",
+	    "bytes_up":"302578104",
+	    "bytes_down":"286847744",
+	    "latency":"8",
+	    "latency_min":"0",
+	    "latency_max":"12",
+	    "std_deviation":"1.000",
+	    "websockets":"500"
+	  }
+	}
+
 The latency measurements and the latency standard deviation are in milliseconds.  The latency is intended to be the arithmetic mean over the sampling period across all connected devices. Statistics has been collected every 15 seconds for the duration of all benchmarking sessions.
 
 Benchmarking Setup
@@ -161,7 +163,7 @@ The load generator application was running on a separate machine in the same ava
 
 ----------
 
-### Case 1: 100,000 connected devices
+## Case 1: 100,000 connected devices
 
 #### Case 1.1:  response size 32 bytes
 Number of devices: 100,000
@@ -213,7 +215,7 @@ Number of opened WebSockets:  2,000
 
 
 ----------
-### Case 2: 500,000 connected devices
+##Case 2: 500,000 connected devices
 
 #### Case 2.1:  response size 32 bytes
 Number of devices: 500,000
@@ -281,7 +283,7 @@ Number of opened WebSockets:  4,000
 
 
 ----------
-### Case 3: 1,000,000 connected devices
+##Case 3: 1,000,000 connected devices
 
 #### Case 3.1:  response size 32 bytes
 Number of devices: 1,000,000
@@ -351,5 +353,4 @@ Number of opened WebSockets:  4,000
 ------
 &copy; 2015 Copyright,  Visible Energy Inc.
 cometa@visiblenergy.com
-
 
